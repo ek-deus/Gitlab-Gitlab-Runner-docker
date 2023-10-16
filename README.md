@@ -3,6 +3,7 @@
 Создадим каталог с файлом docker-compose.yml
 
 `mkdir -p /data/docker/gitlab`
+
 `nano gitlab\docker-compose.yml`
 
  
@@ -10,8 +11,11 @@
 Создадим структуру папок для образов:
 
 `mkdir -p /data/docker/gitlab/var/opt/gitlab`
+
 `mkdir -p /data/docker/gitlab/var/log/gitlab`
+
 `mkdir -p /data/docker/gitlab/etc/gitlab-runner`
+
 `mkdir -p /data/docker/gitlab/var/run/docker.sock`
 
  
@@ -67,4 +71,5 @@ networks:
 `docker exec -it gitlab_gitlab_1 grep 'Password:' /etc/gitlab/initial_root_password`
 
 Удалить все: 
+
 `docker-compose stop && docker-compose rm -f `
